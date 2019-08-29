@@ -14,6 +14,7 @@ Hello and welcome to the team meeting!
 ### Participants 
 
 Please sign in below so we know who was here:
+
 Name / Institution / @GitHub handle (optional)
 
 - Fabien Maussion / University of Innsbruck / @fmaussion
