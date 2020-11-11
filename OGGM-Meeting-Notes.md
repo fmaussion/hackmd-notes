@@ -1,4 +1,6 @@
-# OGGM Open Meeting Notes
+# OGGM Open Meeting 
+
+###### tags: `oggm` `meeting notes`
 
 About the format:
 - **Flash updates**: quick round of short updates (~2 minutes), request of additional agenda items for longer discussions
@@ -7,7 +9,641 @@ About the format:
 - **Action items**: what needs to be done after the meeting and by who
 - **Move to next meeting**: items that couldn't be discussed this time
 
-# Call: 2020-02-19
+# Call: 2020-11-11
+
+### Participants 
+
+Please sign in below so we know who was here:
+
+Name / Institution / @GitHub handle (optional)
+- Anouk Vlug / University of Innsbruck / @anoukvlug
+- Nicolas Champollion / Institut des Géosciences de l'Environnement / @nchampollion
+- Larissa van der Laan / University of Hannover / @lvdlaan
+- Julia Eis / University of Bremen/@juliaeis
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+- 
+
+
+### Flash updates
+- Anouk
+    - Why can my single forced SMB test simulations not be added up for the Arctic in recent times?
+- Larissa
+    - Non-OGGM related paper, CMIP5 decadal runs
+- Fabien:
+    - still fighting with inversion related problems, good interactions with David Rounce
+    - Glacio Hack tomorrow and Friday: https://github.com/GlacioHack 
+
+
+### Group Agenda Points
+
+- Is HackMD laggy somehow? I put the very old notes in another doc
+- Meeting time for US OGGM friends?
+
+### Action items
+
+
+
+# Call: 2020-10-28
+
+### Participants 
+
+Please sign in below so we know who was here:
+
+Name / Institution / @GitHub handle (optional)
+- Anouk Vlug / University of Innsbruck / @anoukvlug
+- Larissa van der Laan / University of Hannover / @lvdlaan
+- Madlene Pfeiffer / University of Bremen / @mpfeiffer
+- Julia Eis/ University of Bremen/ @juliaeis 
+- Hamid Mojtabavi / University of Bremen/ @Hamid Mojtabavi 
+- Jan-Hendrik Malles / University of Bremen / @jmalles 
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+- Li Fei / ITP-CAS / @Keeptg 
+- Melissa Mengert / University of Bremen / @Melissa 
+- Beatriz Recinos / NOC / @bearecinos
+
+### Flash updates
+- Short introduction round of everyone.
+- Anouk:
+    - New approach to checking if my single forced results add up to the fully forced results, in the test simulations
+- Larissa:
+    - CMIP5 decadal forecasts to force OGGM
+- Julia:
+    - preparing my Phd defense
+- Jan
+    - submitting paper this week, then back to OGGM :-)
+- Lilian
+    - I am working on including a kind of "daily" melt model by using monthly mean and daily standard deviation and assuming a gaussian temperature distibution
+    - however, at the moment I am working again on the revision of a non-OGGM related manuscript 
+- Li Fei:
+    - still effort on the paper text, nothing new to share
+- Bea:
+    - saying hello. Greenland paper update.
+
+
+# Call: 2020-10-14
+
+### Participants 
+
+Please sign in below so we know who was here:
+
+Name / Institution / @GitHub handle (optional)
+- Anouk Vlug / University of Innsbruck / @anoukvlug
+- Julia Eis/ University of Bremen/ @juliaeis 
+- Jan-Hendrik Malles / University of Bremen / @jmalles 
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+- Moritz Oberrauch / University of Innsbruck / [@oberrauch](https://github.com/oberrauch)
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+
+
+### Flash updates
+- Anouk Vlug:
+    - Testing single forced simulations
+    - Simulations with prescribed geometry
+- Julia: 
+    - SAVE THE DATE: 26.11.2020, 12:00- 14:00 will take place my PhD defence (hybrid: in person and online)
+    - still working on CO2 response functions with BernSCM (a simple climate model)
+    - plan to do many equilibrium runs with OGGM (not yet started)
+- Jan:
+    - still nothing new concerning OGGM...
+- Lilian: 
+    - nothing new just trying to think Bayesian 
+    - I am working on implementing the Bayesian framework into OGGM, starting first with Hintereisferner and only using mustar as free parameter 
+- Moritz:
+    - ACF, PACF and PSD for time series analysis
+- Fabi:
+    - Text on Matthias 
+    - Working on update of pre-processed directories
+    - found a way to connect jupyter remotely on the cluster
+
+
+
+
+# Call: 2020-09-30
+
+### Participants 
+
+Please sign in below so we know who was here:
+
+Name / Institution / @GitHub handle (optional)
+- Matthias Dusch / University of Innsbruck / @matthiasdusch
+- Anouk Vlug / University of Innsbruck / @anoukvlug
+- Jan-Hendrik Malles / University of Bremen / @jmalles
+- Julia Eis/University of Bremen/ @juliaeis
+- Li Fei / ITP-CAS / @Keeptg  
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+
+
+### Flash updates
+
+- Matthias: Struggling with preindustrial climate simulations
+- Anouk: 
+    - I started doing simulations on the cluster to test some things. This included checking the effect in using the ensemble climatology instead of the ensemble member its climatology when aplying the anomaly method for a selection of glaciers. 
+- Jan: nothing new concerning OGGM
+- Julia: nothing new regarding oggm
+- Li Fei: 
+    - Simulated the glacier change with different temperature and precipitation bias (A cooperative work)
+    - Calibrating inversion thickness model in Tian Shan
+    - Training about filed work and glacier rescue
+- Lilian: nothing really new, but started to introduce myself a bit more into Machine Learning and Bayesian Methods
+    - e.g. went through this illustrative jupyter-notebook "book": https://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/ 
+      (they use the same package 'pymc' as in David Rounce' PyGEM Bayesian approach)
+- Fabien:
+    - new laptop, unravelled a couple of maintenance tasks for OGGM
+
+
+# Call: 2020-09-16
+
+### Participants 
+
+Please sign in below so we know who was here:
+
+Name / Institution / @GitHub handle (optional)
+- Matthias Dusch / University of Innsbruck / @matthiasdusch
+- Anouk Vlug / University of Innsbruck / @anoukvlug
+- Li Fei / ITP-CAS / @Keeptg 
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+- Julia Eis/ University of Bremen / @juliaeis 
+
+
+### Flash updates
+
+- Matthias:
+    - Back from vacation
+    - New OGGM office mates
+- Anouk:
+    - Started in Innsbruck
+    - Played for the first time with the Bremen cluster
+    - Did some simulations forced with the CESM-LME starting in 1850 CE
+- Li Fei:
+    - Tried simulating ice thickness by using exponential MB profile
+    - Paper text
+- Lilian:
+    - PhD proposal submitted last saturday together with Fabien 
+    - thinking about which courses I could take  
+- Julia: 
+    - code cleaning/example writing of initialization module
+    - slowly starting the "new" project
+    
+    
+# Call: 2020-09-01
+
+### Participants 
+
+Please sign in below so we know who was here:
+
+Name / Institution / @GitHub handle (optional)
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+- Julia Eis/ University of Bremen/ @juliaeis 
+- Anouk Vlug / University of Innsbruck / @anoukvlug
+- Jan-Hendrik Malles / University of Bremen / @jmalles 
+- Li Fei / ITP-CAS
+
+### Flash updates
+
+- Fabien:
+    - Lilian PhD project final round
+    - UIBK part of EU H2020 proposal submitted yesterday 
+- Lilian:
+    - PhD officially started by university fellowship
+    - finalising PhD project proposal for ÖAW-DOC fellowship 
+- Julia: 
+    - submitted the comparison paper to Frontiers in Earth Science
+    - finally submitted the thesis (defense will most probably take place mid/end November)
+- Jan
+    - working on code
+- Li Fei
+    - (DEM - COPDEM) Glacier change from topo data 
+- Anouk
+    - Arrived in Innsbruck
+    
+### Group Agenda Points
+
+- Code within or outside of OGGM
+
+
+### Action items
+
+# Call: 2020-08-19
+
+### Participants 
+
+Please sign in below so we know who was here:
+
+Name / Institution / @GitHub handle (optional)
+- Matthias Dusch / University of Innsbruck / @matthiasdusch
+- Moritz Oberrauch / University of Innsbruck / [@oberrauch](https://github.com/oberrauch)
+- Patrick Schmitt / University of Innsbruck / [@pat-schmitt](https://github.com/pat-schmitt)
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+
+
+### Flash updates
+
+- Matthias:
+    - see below
+- Fabien:
+    - High school student Josie had a look at OGGM-Edu
+    - Lilian PhD project
+- Moritz:
+    - Alpine runs on Cluster comparing the volume/area scaling model to the flowline model; scaling underestimates volume change in response to +/- 0.5°C step change; normalized volume change +/-20% with scaling and +60%/-40% with flowline.
+    
+### Group Agenda Points
+- Matthias: presentation of ensemble results: HISTALP reconstructions since LIA, commitment runs and projections
+
+### Action items
+
+
+# Call: 2020-08-05
+
+### Participants 
+
+Please sign in below so we know who was here:
+
+Name / Institution / @GitHub handle (optional)
+- Matthias Dusch / University of Innsbruck / @matthiasdusch
+- Julia Eis/ University of Bremen / @juliaeis 
+- Jan-Hendrik Malles / University of Bremen / @jmalles
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+
+### Flash updates
+
+- Matthias:
+    - back from holidays, no updates
+- Julia: 
+    - will submit the paper hopefully latest by beginning of next week
+- Jan:
+    - changed some things in my frontal ablation implementation
+    - but on hold due to going back to reconstruction paper
+- Fabien:
+    - testing the new cluster
+    - changes in OGGM inversion are now in: expect changes in the model output
+- Lilian:
+    - nothing really new 
+### Group Agenda Points
+- Julia: presentation of the new paper (Reconstruction of past glacier changes using a glacier model: validation with observations) 
+
+### Action items
+
+
+
+# Call: 2020-07-22
+
+### Participants 
+
+Please sign in below so we know who was here:
+
+Name / Institution / @GitHub handle (optional)
+- Matthias Dusch / University of Innsbruck / @matthiasdusch
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+- Bob McNabb / Ulster University  / @iamdonovan
+- Julia Eis / University of Bremen /@juliaeis
+- Anouk Vlug / University of Bremen / @anoukvlug
+
+### Flash updates
+
+- Matthias:
+    - work on calibration paper, holidays next week, update/results probably in the meeting after the next one
+- Fabien:
+    - some work on the ice thickness inversion in the pipeline
+    - interesting call last week on a PyGEM / OGGM paper in preparation
+- Julia: 
+    - Comparison paper almost done (just need to revise the conclusion and abstract)
+
+### Group Agenda Points
+
+- OGGM and LIA
+
+### Action items
+
+- Matthias presentation in 4 weeks (19.08)
+
+
+# Call: 2020-07-08 (brainstorm session on surface mass-balance processes)
+
+### Participants 
+
+Please sign in below so we know who was here:
+
+Name / Institution / @GitHub handle (optional)
+- Matthias Dusch / University of Innsbruck / @matthiasdusch
+- David Rounce / Carnegie Mellon University
+- Anouk Vlug / University of Bremen / @anoukvlug
+- Larissa van der Laan / Hannover University / @lvdlaan
+- Julia Eis/ University of Bremen / @juliaeis 
+- Melissa Mengert/ University of Bremen
+- Jan-Hendrik Malles / University of Bremen / @jmalles 
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+- Jon Mackay / British Geological Survey / @hydrojon 
+
+### Brainstorming session - mass balance modelling
+
+- a lot of good discussions! Thanks all for joining. 
+
+
+
+# Call: 2020-06-24
+
+### Participants 
+
+Please sign in below so we know who was here:
+
+Name / Institution / @GitHub handle (optional)
+- Matthias Dusch / University of Innsbruck / @matthiasdusch
+- Anouk Vlug / University of Bremen / @anoukvlug
+- Julia Eis / University of Bremen / @juliaeis 
+- Jan-Hendrik Malles / University of Bremen / @jmalles 
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+- Jon Mackay / British Geological Survey / @hydrojon
+
+
+### Flash updates
+
+- Matthias:
+    - work on calibration paper
+- Jan:
+    - working on frontal ablation
+- Julia: 
+    - corrections of paper draft (Bens comments)
+- Fabien:
+    - "Frontal ablation week" with Lizz
+    - still working on OGGM MB calib
+- Lilian: 
+    - working on PhD proposal (trying to understand better bias correction and downscaling)
+
+### Group Agenda Points
+
+
+### Action items
+
+- next MB workshop?
+
+
+
+
+# Call: 2020-06-17
+
+### Participants 
+
+Please sign in below so we know who was here:
+
+Name / Institution / @GitHub handle (optional)
+- Matthias Dusch / University of Innsbruck / @matthiasdusch
+- Anouk Vlug / University of Bremen / @anoukvlug
+- Julia Eis/University of Bremen / @juliaeis 
+- Jan-Hendrik Malles / University of Bremen / @jmalles 
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+
+
+### Flash updates
+
+- Matthias:
+    - crossvalidation with ERA5
+    - work on calibration paper
+- Anouk:
+    - Update on the volcanic single forced simulations.
+- Julia: 
+    - nothing to report (just back from home-holidays)
+- Jan:
+    - presentation of my work on frontal ablation
+- Lilian:
+    - working on PhD-proposal 
+- Li Fei:
+    - doing runs on cluster 
+- Fabien:
+    - stuff with climate: ERA5 + ERA5L
+    - also working with Lizz for one week remotely
+
+### Group Agenda Points
+
+- time mismatch between dynamics and MB Mod (https://github.com/OGGM/oggm/issues/1020)
+- Jan (calving)
+
+### Action items
+
+- in 2 weeks Lilian proposal
+
+# Call: 2020-05-27
+
+### Participants 
+
+Please sign in below so we know who was here:
+
+Name / Institution / @GitHub handle (optional)
+- Matthias Dusch / University of Innsbruck / @matthiasdusch
+- Anouk Vlug / University of Bremen / @anoukvlug
+- Jan-Hendrik Malles / University of Bremen / @jmalles
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+
+
+### Flash updates
+
+- Matthias:
+    - some unfinished work on the ERA5 crossvalidation
+- Anouk:
+    - (Still working on my thesis)
+- Jan:
+    - Working on how exactly to implement the ocean data algorithm 
+- Fabien:
+    - proposal submitted by Regine Hock (PyGEM + OGGM component).
+    - Dave Rounce submitted debris paper to Nat Geo 
+    - Journey for a better OGGM going good - some attempts at inversion + init_present_glaciers not great
+    - OGGM-Edu apps + video for talk next week (invite on Slack)
+- Lilian:
+    - doing some literature research for PhD proposal
+
+### Action items
+
+- Jan and Li Fei have ideas for presentations next time!
+- Organize breakout workshops
+
+
+# Call: 2020-05-13
+
+### Participants 
+
+Please sign in below so we know who was here:
+
+Name / Institution / @GitHub handle (optional)
+- Matthias Dusch / University of Innsbruck / @matthiasdusch
+- Anouk Vlug / University of Bremen / @anoukvlug
+- Jan-Hendrik Malles / University of Bremen / @jmalles 
+- Julia Eis / University of Bremen/ @juliaeis 
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+
+### Flash updates
+
+- Matthias: 
+    - EGU2020: https://meetingorganizer.copernicus.org/EGU2020/EGU2020-9589.html
+- Jan:
+    - This time I will be there and tell you a little about my messing with Bea's calving function...
+- Julia: 
+    - getting rid of temp. bias for the real-world cases, will change the paper draft (where 5 different temp. biases were tested and compared to observation, we now only keep temp. bias=0K) to make the "new" method easier to understand.
+- Fabien:
+    - EGU week: Session + RGI meeting: https://github.com/GLIMS-RGI/rgidocs 
+    - Work with ERA5 finally in a draft stage: https://github.com/OGGM/oggm/pull/1015
+    - Further changes include moving of certain climate tasks to the shop
+- Anouk: 
+    - A little update on the single forced simulations for the Canadian Arctic.
+- Lilian:
+    - nothing specific
+    - PhD proposal mass-balance modelling
+- Li Fei:
+    - working on first paper with some OGGM results inside (but not only)
+
+### Group agenda points
+
+- Online substitution to Workshop?
+
+
+### Action items
+
+
+
+
+# Call: 2020-04-29
+
+### Participants 
+
+Please sign in below so we know who was here:
+
+Name / Institution / @GitHub handle (optional)
+- Larissa van der Laan / University of Hannover / larissavdlaan
+- Jan-Hendrik Malles / University of Bremen / @jmalles
+- Jon Mackay / British Geological Survey / @hydrojon 
+- Julia Eis/ University of Bremen /@juliaeis
+- Anouk Vlug / University of Bremen / @anoukvlug
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+
+### Flash updates
+
+- Jan: 
+    - starting to mess around with Bea's calving function...
+- Julia:
+    - Code cleaning of initialization module 
+    - partitioning module could be updated to python3 (using Pyshed package) 
+- Anouk:
+    - I'm am still writting my thesis.
+    - (For those that are intrested I can tell a bit about the figure I uploaded last week in the surface mass balance channel.)
+- Fabien:
+    - Adding climate data -> some changes happening
+    - Training last week went well
+    - Two master theses went very well 
+    - Preparing next week's EGU events
+- Lilian:
+    - had my defensio last Friday
+    - preparing now display for EGU (project not related to OGGM) 
+- Larissa:
+    - cleaning up init code as well
+    - CMIP5 issues
+- Jon:
+    - Britisch Geological Survey - Hydrologist 
+    - NERC in Peru - 21st glacier retreat
+
+    
+### Group agenda points
+
+- Figure (Anouk)
+
+### Action items
+
+- Workshop about MB models in OGGM
+
+
+
+# Call: 2020-04-15
+
+### Participants 
+
+Please sign in below so we know who was here:
+
+Name / Institution / @GitHub handle (optional)
+- Matthias Dusch / University of Innsbruck / @matthiasdusch
+- Anouk Vlug / University of Bremen / @anoukvlug
+- Julia Eis/University of Bremen/ @juliaeis 
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+
+### Flash updates
+
+- Matthias: Randomized ensemble selection - a good idea?
+- Anouk: Like 2 weeks ago, I am still writing my thesis.
+- Julia: same as Anouk :). Only the conclusion is missing! 
+- Fabien: working on OGGM again
+    - OGGM Shop first steps
+    - In the process of updating WGMS data: @matthias maybe some monitoring for crossval
+- Lilian: nothing new
+-
+### Group agenda points
+
+ 
+
+
+# Call: 2020-04-01
+
+### Participants 
+
+Please sign in below so we know who was here:
+
+Name / Institution / @GitHub handle (optional)
+- Anouk Vlug / University of Bremen / @anoukvlug
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+- Julia Eis / University of Bremen/ @juliaeis 
+- Beatriz Recinos / University of Bremen / @bearecinos
+- Jan-Hendrik Malles / University of Bremen / @jmalles 
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+
+### Flash updates
+
+- Anouk: Home office and thesis writing (not a lot to give an update on)
+- Lilian: Finally managed to submit Master thesis online. I will present some results after the flash updates.
+- Julia: same as Anouk: home office and writing up the thesis
+- Bea: quick updates ... probably my last meeting .. some results
+- Jan: learning how to perform oggm runs on cluster...
+- Fabien: 
+    - back to programming! feels good
+    - thinking about offering an online OGGM tutorial soon
+    - OGGM workshop perspectives are looking bad
+
+### Group agenda points
+
+- Lilian: Presentation of some results of Master Thesis 
+  "Response time of glaciers using the Open Global Glacier Model from idealised experiments to an estimate for Alpine glaciers"
+ 
+
+# Call: 2020-03-18
+
+### Participants 
+
+Please sign in below so we know who was here:
+
+Name / Institution / @GitHub handle (optional)
+- Matthias Dusch / University of Innsbruck / @matthiasdusch
+- Anouk Vlug / University of Bremen / @anoukvlug
+- Julia Eis / University of Bremen / @juliaeis 
+- Beatriz Recinos / University of Bremen / @bearecinos
+- Jan-Hendrik Malles / University of Bremen / @jmalles
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+ 
+### Flash updates
+
+- Julia : finished the paper draft, now finishing the thesis until (hopefully end of april)
+- Bea: working on the paper draft and figures
+- Jan: short presentation of paper draft(?), starting to work with OGGM on glacier-ocean interactions
+- Fabien: 
+    - a lot a lot of co-author work and student theses to read. Not the most productive time right now
+- Lilian: correcting Master's Thesis
+- Matthias: Some work on DEMs.
+ 
+
+# Call: 2020-03-04
 
 ### Participants 
 
