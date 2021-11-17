@@ -9,249 +9,153 @@ About the format:
 - **Action items**: what needs to be done after the meeting and by who
 - **Move to next meeting**: items that couldn't be discussed this time
 
-# Call: 2020-11-11
+# Call: 2021-11-17
 
 ### Participants 
 
-Please sign in below so we know who was here:
+Please sign in below so we know who will be/was here:
 
 Name / Institution / @GitHub handle (optional)
 - Anouk Vlug / University of Innsbruck / @anoukvlug
-- Nicolas Champollion / Institut des Géosciences de l'Environnement / @nchampollion
-- Larissa van der Laan / University of Hannover / @lvdlaan
-- Julia Eis / University of Bremen/@juliaeis
+- Jan-Hendrik Malles / University of Bremen / @jmalles 
+- Romain Hugonnet / ETH Zürich & University of Toulouse / @rhugonnet
+- Niklas Richter / University of Innsbruck/ @Richteny
+- Samar Minallah / University of Michigan Ann Arbor
+- Muhammad Shafeeque / University of Bremen
+- Hamid Mojtabavi / University of Bremen /@Hamid Mojtabavi
 - Fabien Maussion / University of Innsbruck/ @fmaussion 
-- 
-
+- Patrick Schmitt / University of Innsbruck / @pat-schmitt
 
 ### Flash updates
 - Anouk
-    - Why can my single forced SMB test simulations not be added up for the Arctic in recent times?
-- Larissa
-    - Non-OGGM related paper, CMIP5 decadal runs
-- Fabien:
-    - still fighting with inversion related problems, good interactions with David Rounce
-    - Glacio Hack tomorrow and Friday: https://github.com/GlacioHack 
+    - ELA diagnostics: https://github.com/OGGM/oggm/pull/1333
+- Jan
+    - Working on bringing Romain's and Will's data together for frontal ablation calibration/projection
+    - Start writing Methods section for a corresponding paper
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+    - PhD concept almost ready to "submit" it to Fabien 
+    - will work on documenting the different quality check and temperature bias correction methods of OGGM and on generalising error analysis workflows, any comments are welcome
+    - happy to hear Romain's uncertainty propagation talk
+- Fabien
+    - Managed to delegate some work to Lily and Patrick
+    - Not much new code on OGGM, mosty docs and fixes. New release soon.
+- Patrick
+    - new app now on the server in bremen (bokeh.oggm.org), release on OGGM-Edu website coming soon
+    - start working on an dynamic spinup function for the initialisation of OGGM runs
+    - programming work on COMBINE
 
 
 ### Group Agenda Points
-
-- Is HackMD laggy somehow? I put the very old notes in [another doc](https://github.com/fmaussion/hackmd-notes/blob/master/OGGM-Notes-Legacy.md)
-- Meeting time for US OGGM friends?
+- Presentation by Romain on *How to propagate uncertainties from local to regional scales?*
 
 ### Action items
 
 
-
-# Call: 2020-10-28
-
-### Participants 
-
-Please sign in below so we know who was here:
-
-Name / Institution / @GitHub handle (optional)
-- Anouk Vlug / University of Innsbruck / @anoukvlug
-- Larissa van der Laan / University of Hannover / @lvdlaan
-- Madlene Pfeiffer / University of Bremen / @mpfeiffer
-- Julia Eis/ University of Bremen/ @juliaeis 
-- Hamid Mojtabavi / University of Bremen/ @Hamid Mojtabavi 
-- Jan-Hendrik Malles / University of Bremen / @jmalles 
-- Lilian Schuster / University of Innsbruck / @lilianschuster
-- Li Fei / ITP-CAS / @Keeptg 
-- Melissa Mengert / University of Bremen / @Melissa 
-- Beatriz Recinos / NOC / @bearecinos
-
-### Flash updates
-- Short introduction round of everyone.
-- Anouk:
-    - New approach to checking if my single forced results add up to the fully forced results, in the test simulations
-- Larissa:
-    - CMIP5 decadal forecasts to force OGGM
-- Julia:
-    - preparing my Phd defense
-- Jan
-    - submitting paper this week, then back to OGGM :-)
-- Lilian
-    - I am working on including a kind of "daily" melt model by using monthly mean and daily standard deviation and assuming a gaussian temperature distibution
-    - however, at the moment I am working again on the revision of a non-OGGM related manuscript 
-- Li Fei:
-    - still effort on the paper text, nothing new to share
-- Bea:
-    - saying hello. Greenland paper update.
-
-
-# Call: 2020-10-14
+# Call: 2021-11-03
 
 ### Participants 
 
-Please sign in below so we know who was here:
+Please sign in below so we know who will be/was here:
 
 Name / Institution / @GitHub handle (optional)
 - Anouk Vlug / University of Innsbruck / @anoukvlug
-- Julia Eis/ University of Bremen/ @juliaeis 
+- Muhammad Shafeeque / University of Bremen
+- Samar Minallah / University of Michigan
+- Hamid Mojtabavi / University of Bremen /@Hamid Mojtabavi
+- Larissa van der Laan / University of Hannover / @Lvdlaan
+- Patrick Schmitt / University of Innsbruck / @pat-schmitt
 - Jan-Hendrik Malles / University of Bremen / @jmalles 
 - Lilian Schuster / University of Innsbruck / @lilianschuster
-- Moritz Oberrauch / University of Innsbruck / [@oberrauch](https://github.com/oberrauch)
 - Fabien Maussion / University of Innsbruck/ @fmaussion 
+- Lizz Ultee / Middlebury College / @ehultee
 
 
 ### Flash updates
-- Anouk Vlug:
-    - Testing single forced simulations
-    - Simulations with prescribed geometry
-- Julia: 
-    - SAVE THE DATE: 26.11.2020, 12:00- 14:00 will take place my PhD defence (hybrid: in person and online)
-    - still working on CO2 response functions with BernSCM (a simple climate model)
-    - plan to do many equilibrium runs with OGGM (not yet started)
-- Jan:
-    - still nothing new concerning OGGM...
-- Lilian: 
-    - nothing new just trying to think Bayesian 
-    - I am working on implementing the Bayesian framework into OGGM, starting first with Hintereisferner and only using mustar as free parameter 
-- Moritz:
-    - ACF, PACF and PSD for time series analysis
-- Fabi:
-    - Text on Matthias 
-    - Working on update of pre-processed directories
-    - found a way to connect jupyter remotely on the cluster
+- Anouk: 
+    - I have started to use the new flowline diagnostics, so I will be able to prescribe the geometry of the LMR simulations during the simulations forced with the CESM-LME. 
+    - I started working on getting the ELA back as diagnostic variable in OGGM. It will become a variable that can seperately be computed (it won't be a standard model run output). 
+- Patrick:
+    - working on final steps for the release of the new OGGM-Edu App
+    - continue connecting COMBINE with OGGM GlacierDirectory
+- Lilian:
+    - worked last week together with Sarah that she can use the massbalance-sandbox with the hydro-model
+    - writing phd concept ...
+- Fabien:
+    - some changes to OGGM: https://github.com/OGGM/oggm/commits/master
+- Samar:
+    - Trying to set up an ice sheet model (CISM) for mountain glaciers and GlacierMIP
+    - Still trying to finish OGGM work for Karakoram (presenting at AGU)
+    - Applying for postdoc positions 
 
+- Lizz:
+    - Supporting student working on hydro simulations of Olivares Alfa, Chile
 
+### Group Agenda Points
+- Presentations by Jan and Larissa
 
+### Action items
+- Presentation by Romain November 17th
 
-# Call: 2020-09-30
+# Call: 2021-10-20
 
 ### Participants 
 
-Please sign in below so we know who was here:
+Please sign in below so we know who will be/was here:
 
 Name / Institution / @GitHub handle (optional)
-- Matthias Dusch / University of Innsbruck / @matthiasdusch
 - Anouk Vlug / University of Innsbruck / @anoukvlug
 - Jan-Hendrik Malles / University of Bremen / @jmalles
-- Julia Eis/University of Bremen/ @juliaeis
-- Li Fei / ITP-CAS / @Keeptg  
+- Muhammad Shafeeque / University of Bremen
+- Jakob Steiner / ICIMOD, Uni Utrecht / @fidelsteiner
+- Julia Eis/ University of Bremen / @juliaeis
+- Larissa van der Laan / University/ @Lvdlaan
+- Melissa Mengert / University of Bremen/ @Melissa 
+- Hamid Mojtabavi / University of Bremen /@Hamid Mojtabavi
+- Patrick Schmitt / University of Innsbruck /@pat-schmitt
 - Lilian Schuster / University of Innsbruck / @lilianschuster
-- Fabien Maussion / University of Innsbruck/ @fmaussion 
-
+- Sarah Hanus / University of Zurich / @sarah-hanus
+- Fabien Maussion / University of Innsbruck/ @fmaussion
+- Samar Minallah / University of Michigan/ @minallah
 
 ### Flash updates
-
-- Matthias: Struggling with preindustrial climate simulations
-- Anouk: 
-    - I started doing simulations on the cluster to test some things. This included checking the effect in using the ensemble climatology instead of the ensemble member its climatology when aplying the anomaly method for a selection of glaciers. 
-- Jan: nothing new concerning OGGM
-- Julia: nothing new regarding oggm
-- Li Fei: 
-    - Simulated the glacier change with different temperature and precipitation bias (A cooperative work)
-    - Calibrating inversion thickness model in Tian Shan
-    - Training about filed work and glacier rescue
-- Lilian: nothing really new, but started to introduce myself a bit more into Machine Learning and Bayesian Methods
-    - e.g. went through this illustrative jupyter-notebook "book": https://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/ 
-      (they use the same package 'pymc' as in David Rounce' PyGEM Bayesian approach)
-- Fabien:
-    - new laptop, unravelled a couple of maintenance tasks for OGGM
-
-
-# Call: 2020-09-16
-
-### Participants 
-
-Please sign in below so we know who was here:
-
-Name / Institution / @GitHub handle (optional)
-- Matthias Dusch / University of Innsbruck / @matthiasdusch
-- Anouk Vlug / University of Innsbruck / @anoukvlug
-- Li Fei / ITP-CAS / @Keeptg 
-- Lilian Schuster / University of Innsbruck / @lilianschuster
-- Julia Eis/ University of Bremen / @juliaeis 
-
-
-### Flash updates
-
-- Matthias:
-    - Back from vacation
-    - New OGGM office mates
 - Anouk:
-    - Started in Innsbruck
-    - Played for the first time with the Bremen cluster
-    - Did some simulations forced with the CESM-LME starting in 1850 CE
-- Li Fei:
-    - Tried simulating ice thickness by using exponential MB profile
-    - Paper text
+    - I'm currently working on global simulations over the period 0-2000 CE, forced with the Last Millenium Reanalysis. I'm in the phase of calibrating the simulations. In the end this experiment will serve as base simulation for the mass balance attribution to different climate forcings over the last millenium.
+- Jan:
+    - Did some calibrated projections w/ and wo/ frontal ablation
+    - Can show some plots soon
+- Julia:
+    - Coming to an end with my digression on carbon-cycle climate modeling 
+    --> I would be happy to present some results about it (not OGGM related, but it is the prehistory and closely related to my following work with OGGM)
+    - will start global equilibrium runs with OGGM soon
+- Larissa:
+    - Decision: recalibrating to Hugonnet for 2000 onward decades?
+    - Finishing all decades: can show plots next meeting?
+- Patrick:
+    - Not much new, still working on connecting COMBINE with GlacierDirectories for testing the method on real glaciers
 - Lilian:
-    - PhD proposal submitted last saturday together with Fabien 
-    - thinking about which courses I could take  
-- Julia: 
-    - code cleaning/example writing of initialization module
-    - slowly starting the "new" project
-    
-    
-# Call: 2020-09-01
-
-### Participants 
-
-Please sign in below so we know who was here:
-
-Name / Institution / @GitHub handle (optional)
-- Fabien Maussion / University of Innsbruck/ @fmaussion 
-- Lilian Schuster / University of Innsbruck / @lilianschuster
-- Julia Eis/ University of Bremen/ @juliaeis 
-- Anouk Vlug / University of Innsbruck / @anoukvlug
-- Jan-Hendrik Malles / University of Bremen / @jmalles 
-- Li Fei / ITP-CAS
-
-### Flash updates
-
+    - writing PhD concept, but got stuck in details when comparing method implementations between models :-)
+- Sarah: 
+    - trying to downscale coarse climate data, however it is very slow
 - Fabien:
-    - Lilian PhD project final round
-    - UIBK part of EU H2020 proposal submitted yesterday 
-- Lilian:
-    - PhD officially started by university fellowship
-    - finalising PhD project proposal for ÖAW-DOC fellowship 
-- Julia: 
-    - submitted the comparison paper to Frontiers in Earth Science
-    - finally submitted the thesis (defense will most probably take place mid/end November)
-- Jan
-    - working on code
-- Li Fei
-    - (DEM - COPDEM) Glacier change from topo data 
-- Anouk
-    - Arrived in Innsbruck
-    
+    - did some tests simulations for glacierMIP3
+    - new stop criterion for OGGM simulations
+    - Geodetic calibration now happening on calendar years (also in the preprocessed directories) and also works on multiple flowlines on demand (not recommended) 
+    - As always: recent commits on gitub: https://github.com/OGGM/oggm/commits/master
+- Hamid
+    - Working on projections with MBdebris (mass balance with debri covers)
+- Samar    
+    - Doing some runs in Himalaya-Karakoram region with ERA5-L atm data - preparing for AGU FM presentation
+- Muhammad 
+    - Recently started in Bremen and going to work on Greenland Peripheral glaciers with OGGM.
+- Melissa
+    - Working on a poster
+    - Received comments on the sun changing colors in the graphics
+
 ### Group Agenda Points
-
-- Code within or outside of OGGM
-
-
-### Action items
-
-# Call: 2020-08-19
-
-### Participants 
-
-Please sign in below so we know who was here:
-
-Name / Institution / @GitHub handle (optional)
-- Matthias Dusch / University of Innsbruck / @matthiasdusch
-- Moritz Oberrauch / University of Innsbruck / [@oberrauch](https://github.com/oberrauch)
-- Patrick Schmitt / University of Innsbruck / [@pat-schmitt](https://github.com/pat-schmitt)
-- Fabien Maussion / University of Innsbruck/ @fmaussion 
-
-
-### Flash updates
-
-- Matthias:
-    - see below
-- Fabien:
-    - High school student Josie had a look at OGGM-Edu
-    - Lilian PhD project
-- Moritz:
-    - Alpine runs on Cluster comparing the volume/area scaling model to the flowline model; scaling underestimates volume change in response to +/- 0.5°C step change; normalized volume change +/-20% with scaling and +60%/-40% with flowline.
-    
-### Group Agenda Points
-- Matthias: presentation of ensemble results: HISTALP reconstructions since LIA, commitment runs and projections
-
-### Action items
+- Day light saving time will end here on October 31st (read the clock will go 1 hour backwards). If that is not the case where you are, please keep in mind for the next meeting that the time shifts ;) 
+- Journal club
+- Showing some first results of the LMR simulations
+- Velocity
 
 ## Older notes 
 
