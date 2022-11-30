@@ -1,3 +1,1076 @@
+# Call: 2022-08-24
+
+### Participants 
+
+Please sign in below so we know who will be/was here:
+
+Name / Institution / @GitHub handle (optional)
+- Anouk Vlug / University of Bremen / @anoukvlug
+- Patrick Schmitt / University of Innsbruck / @pat-schmitt
+- Rodrigo Aguayo / Universidad de Concepción / @rodaguayo
+
+### Flash updates
+- Anouk:
+    - Working on all kind of things, among others things related to the workshop.
+
+- Patrick:
+    - made a PR with some bug fixes for the dynamic mu star calibration task
+    - updated the dynamic spinup tutorial, now including more in-depth explenation of the new task (PR not merged until today)
+    - added a new workflow tutorial showing how to merge, analyse and visualize different GCM runs (PR not merged until today)
+
+- Rodrigo:
+    - Measuring the hydrological modelling perfomance using melt on glacier from OGGM
+
+### Group Agenda Points
+- OGGM goodies :) 
+
+### Questions:
+- Anouk: github personal access tokens
+
+
+# Call: 2022-08-10
+
+### Participants 
+
+Please sign in below so we know who will be/was here:
+
+Name / Institution / @GitHub handle (optional)
+- Anouk Vlug / University of Bremen / @anoukvlug
+- Patrick Schmitt / University of Innsbruck / @pat-schmitt
+- Jan-Hendrik Malles / University of Bremen / @jmalles
+
+### Flash updates
+- Anouk: 
+    - Larissa her decadal manuscript got summitted :D
+    - I have be working on reviewing a manuscript.
+    - Worked on pre-processing climate data for Muhammads Greenland simulations. This was as a little more time consuming than anticipated to program, due to the way the data was gridded combined with its high resolution. As computing the distance between two coordinates is relatively lengthy. I didn't compute this for all grid points, but did it in 2-step. First coarse sampled, and then only computing all the distances near the closest grid point from the first step. I would be happy to make a PR of this example, if people are intrested, however as it is not a common data format that might not be needed.
+- Patrick:
+    - not many news, found some small bugs in the creation of new prepro-gdirs, will open a PR soon
+- Jan:
+    - still revising my paper and code, but both will very soon be ready for submission (I think)
+
+### Questions:
+- RGI question Hamid
+
+# Call: 2022-07-27
+
+### Participants 
+
+Please sign in below so we know who will be/was here:
+
+Name / Institution / @GitHub handle (optional)
+- Anouk Vlug / University of Bremen / @anoukvlug
+- Julia Eis / University of Bremen / @juliaeis 
+- Muhammad Shafeeque / University of Bremen
+- Patrick Schmitt / University of Innsbruck / @pat-schmitt
+- Larissa van der Laan / Leibniz University Hannover / @LvdLaan
+- Sarah Hanus / University of Zurich / @sarah-hanus
+- Fabien Maussion / University of Innsbruck/ @fmaussion
+
+### Flash updates
+
+- Julia
+    - back from maternal leave
+    - started to look at the restults of global equilibrium runs, which was blocking the cluster at the beginning of the year
+        - I might have to rerun ~25.000 glaciers (12%) with a much larger border parameter than 240 (e.g. 500)
+    - concerning the cluster performance everything worked well, but I **can't** recomment submitting such large job arrays (one job for every single glacier -> ~200.000 jobs). Lessons learned: 
+        - max. length of slurms array tasks is N=20.000
+        - the cluster gets slower, when too many jobs are waiting in the queue, as it has to calculate a priority for each of them -> Timo asked me to not send more than 10.000 tasks at the same time
+- Anouk
+    - PR #1444: update on the how to clone your fork documentation, to avoid a tricky error (https://docs.oggm.org/en/latest/contributing.html)
+
+- Muhammad
+    - interested to learn about "recent results of the new reference datasets and calibration"
+
+- Patrick
+    - finally PR of new dynamic mu star calibration is merged :)
+    - created first new prepro gdirs using new prcp_factor calibration and new dynamic mu star calibration, but not analysed yet :(
+    - working on tutorial/documentation of new dynamic mu star calibration
+
+- Larissa
+    - finishing paper
+    - preparing seasonal runs, considerations about initialization
+
+- Fabi:
+    - pre-holiday stress
+    - total mess with Regine's paper
+
+
+### Group Agenda Points
+- Slack channel for Iceland Cryosphere 2022 conference 
+- Meeting times
+- Antarctic glaciers
+
+### Action point
+- Anouk will make a poll for a new meeting time.
+
+# Call: 2022-07-13
+
+### Participants 
+
+Please sign in below so we know who will be/was here:
+
+Name / Institution / @GitHub handle (optional)
+- Anouk Vlug / University of Bremen / @anoukvlug
+- Muhammad Shafeeque / University of Bremen
+- Rodrigo Aguayo / Universidad de Concepción / @rodaguayo
+- Sarah Hanus / University of Zurich / @sarah-hanus
+- Patrick Schmitt / University of Innsbruck / @pat-schmitt
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+- Samar Minallah / University of Michigan / @minallah
+- Francesc Roura Adserias / University of Innsbruck / @franra9
+- Fabien Maussion / University of Innsbruck/ @fmaussion
+
+### Flash updates
+- Muhammad
+    - Planning to submit a few hundred jobs
+        - for Greenland (RGI05): glaciers > 19000 (few hours per run)
+    - some questions related to precipitation_factor and temperature_bias in run_from_climate_data function
+- Anouk
+    - Starting some new runs, both for Larissa her decadal paper and paper revisions Tibetan Plateau surface darkening manuscript I have been contributing to.
+- Sarah
+    - not much new, but planning on starting some global runs soon, any new OGGM updates I should use/be aware of for this?
+- Patrick
+    - working on last changes for the dynamic mu star calibration PR
+- Lily
+    - prepared my poster for the iceland conference 
+    - starting to analyse new preprocessed gdirs w. W5E5
+- Fabien 
+    - Merged some PRs from Lilian and others
+    - Some global simulations running (for tests)
+        - new options as described below
+    - New defaults upcoming in v1.6:
+        - New reference climate data: W5E5 + GSWP3
+        - New glacier specific precip factor (based on winter precip)
+        - Dynamical mu calibration and spinup added as option into the prepro dirs (paper Samar + Patrick important here)
+- Francesc
+    - Update on flowlines tool, outside main OGGM. To make it more accessible for users who have a different purpose for the flowlines.
+- Samar
+    - Have the updated draft with Patrick's new mu* calibration approach (results are not always successful for every glacier, that is more of an issue with the input calibration data)
+    - PhD public defense on August 1 - if anyone wants to join...
+
+
+### General Announcements
+- Upcoming Science Café's
+    - July 20th: Nicolas Champollion will lead the discussion on the Millan et al. (2022) paper, that the authors Romain Millan and Antoine Rabatel will also join.
+    - No Science Café's in August.
+
+### Group Agenda Points
+- Ongoing changes on master (with @Lilian Schuster and @Patrick)
+
+
+### Questions:
+- The current default is qc=3, should we change it back to qc=0 or maybe qc=1? 
+- Sarah Question
+- Muhammad Question
+
+### Action items
+- Fabien will present on his recent global runs
+
+# Call: 2022-06-29
+
+### Participants 
+
+Please sign in below so we know who will be/was here:
+
+Name / Institution / @GitHub handle (optional)
+- Anouk Vlug / University of Bremen / @anoukvlug
+- Jan-Hendrik Malles / University of Bremen / @jmalles
+- Marie Schroeder / University of Innsbruck / @marieschroeder  
+- Muhammad Shafeeque / Uni-Bremen
+- Rodrigo Aguayo / University of Concepcion / @rodaguayo
+- Nicolas Champollion / Institut des Géosciences de l'Environnement, Grenoble / @nchampollion
+- Larissa van der Laan / Leibniz University Hannover / @LvdLaan
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+- Fabien Maussion / University of Innsbruck/ @fmaussion
+
+### Flash updates
+- Jan
+    - Back from North America. Continuing to test my code. (I met someone at the IGS symposium in Alaska last week who does (maybe) interesting work on inversion that might be applicable to OGGM)
+- Anouk
+    - I will be off-line from tomorrow to July 5th.
+- Rodrigo 
+    - I helped to write a proposal about glaciers in the Andes 
+    - I finally started to get results using OGGM
+- Nicolas
+    - PhD candidates first in the complementary list
+- Larisa
+    - Writing....
+- Lilian
+    - wrote a blog post about how fast HEF is melting away
+    - https://oggm.org/2022/06/22/hef-vanishing-open-air-laboratory/
+- Fabien
+    - Just had an interview with PULS4 about OGGM as "Klimaheldinen"
+    - press-release https://www.uibk.ac.at/de/newsroom/2022/negativrekord-gletscherbilanz-rutscht-immer-fruher-ins-minus/ 
+
+### General Announcements
+- Upcoming Science Café's
+    - July 6th: “2010-2020 global glacier mass loss and mass balance partitioning from radar altimetry”, by Noel Gourmelen and Livia Jakob
+    - July 20th: Nicolas Champollion will lead the discussion on the Millan et al. (2022) paper, that the authors Romain Millan and Antoine Rabatel will also join.
+    - No Science Café's in August.
+- OGGM Workshop
+    - Don't forget to register ;) 
+
+
+### Group Agenda Points
+- Presentation from Marie on the new OGGM-edu App: Projections of glacial lakes in High Mountain Asia
+- Mass balance vs precipitation in HMA
+- Answering questions in the support channel
+    - move to discussions??? https://github.com/OGGM/oggm/discussions/landing
+    - https://github.com/OGGM/oggm/wiki 
+
+
+# Call: 2022-06-15
+
+### Participants 
+
+Please sign in below so we know who will be/was here:
+
+Name / Institution / @GitHub handle (optional)
+- Anouk Vlug / University of Bremen / @anoukvlug
+- Larissa van der Laan / Leibniz University Hannover / @LvdLaan
+- Hamid Mojtabavi / University of Bremen /@Hamid Mojtabavi
+- Rodrigo Aguayo / University of Concepcion / @rodaguayo
+- Sarah Hanus / University of Zurich / @sarah-hanus
+- Fabien Maussion / University of Innsbruck/ @fmaussion
+- Nicolas Champollion / Institut des Géosciences de l'Environnement, Grenoble / @nchampollion
+
+### Flash updates
+- Anouk
+    - Working on task from flowline to glacier covered area.
+- Larissa
+    - Writing decadal input paper, finalizing results. Hope to submit soon
+    - Book I wrote a co-wrote a chapter for got published. Anyone know how to 'cheaply' buy Elsevier books?
+- Hamid
+    - Working on my MS
+    - A paper has been accepted (as a co-author)
+- Rodrigo
+    - Developing an experiment to compare different climate datasets in the Southern Andes
+- Fabien
+    - Seen Jan's presentation for Juneau: great!
+    - Had Lizz visiting two weeks ago, mostly OGGM-Edu stuff as outcome
+    - A lot of OGGM PRs on my plate - including Lily's
+    - Quite some strategical talks in the background (with Dave, Harry)
+
+- Sarah
+    - getting some results finally
+
+- Nicolas
+    - PhD candidate
+    - project refused and a new write to be written
+    - Lucille's paper about peak water timing before this summer
+    - simulation before cryosphere 2022
+    - opportunities with hydrology community
+
+### General Announcements
+- Upcoming Science Café's
+    - July 6th: “2010-2020 global glacier mass loss and mass balance partitioning from radar altimetry”, by Noel Gourmelen and Livia Jakob
+    - July 20th: Nicolas Champollion will lead the discussion on the Millan et al. (2022) paper, that the authors Romain Millan and Antoine Rabatel will also join.
+    - No Science Café's in August.
+- OGGM Workshop
+
+### Group Agenda Points
+- Anouk
+    - a little animation
+
+
+
+# Call: 2022-06-01
+
+### Participants 
+
+Please sign in below so we know who will be/was here:
+
+Name / Institution / @GitHub handle (optional)
+- Anouk Vlug / University of Bremen / @anoukvlug
+- Bowen Jia  / Nanjing University  /@bowenbelongstonature
+- Marie Schroeder / University of Innsbruck / @marieschroeder 
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+- Patrick Schmitt / University of Innsbruck / @pat-schmitt
+- Hamid Mojtabavi / University of Bremen /@Hamid Mojtabavi
+- Muhammad Shafeeque / University of Bremen
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+
+
+### Flash updates
+- Anouk
+    - EGU General Assembly
+    - Polar Symposium
+- Bowen
+    - chlorophyll a concentration at two fjords, Svalbard
+- Marie 
+    - new OGGM-edu app in development about glacier lakes in HMA 
+- Lilian
+    - quick opinion discussion on the annual glacier MB dataset (egu presentation given by Ines Dussaillant)?
+    - downloaded 1km resolution CHELSA-W5E5 dataset (1979-2019)
+    - struggling with reference glaciers melting away which makes comparisons more difficult
+- Patrick
+    - presented COMBINE at EGU
+    - first encouraging results with the dynamic mu star calibration (match geodetic mass-balance for around 70% and can improve match for around 20% of RGI-Area globally), but needs further analysis and currently some runs ongoing with (hopeful) further improvement
+- Hamid
+    - Cluster could be busy with my simulation in coming days 
+    - I need runs from OGGM that was performed with Fabi for the IPCC AR6
+- Fabien 
+    - Working with Lizz on OGGM-Edu and other stuff 
+    - https://serc.carleton.edu/teachearth/index.html
+    - Erik defended this morning
+
+### Group Agenda Points
+- glacier MB dataset Ines Dussaillant
+    - Fabi: my opinion is that this dataset is not useful for OGGM (or maybe the longer time series)
+- OGGM t-shirts
+- Science Cafe
+- 2D model
+
+### Action items
+- Marie could present maybe in 2 or 4 weeks
+
+# Call: 2022-05-18
+
+### Participants 
+
+Please sign in below so we know who will be/was here:
+
+Name / Institution / @GitHub handle (optional)
+- Anouk Vlug / University of Bremen / @anoukvlug
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+- Hamid Mojtabavi / University of Bremen /@Hamid Mojtabavi
+- Rodrigo Aguayo / University of Concepcion / @rodaguayo
+- Patrick Schmitt / University of Innsbruck / @pat-schmitt
+
+### Flash updates
+- Anouk
+    - I will go tomorrow to the Polar Symposium and next week to the EGU.
+    - Contributed to a manuscript on in indirect impacts of PV farms in China.
+- Lilian 
+    - incorporated GSWP3_W5E5 as usable climate dataset into OGGM + winter prcp. dependent prcp. factor, pull request in review
+        - do you want me to explain that approach a bit?
+    - also working on a OGGM tutorial to explain how to use your own climate data and then calibrate via geodetic data
+- Hamid
+    - I have fixed flowline issue for my simulations
+- Rodrigo
+    - Revisiting OGGM tutorials 
+    - Two poster presentations for [Chilean Chrysosphere Society](https://sochicri.wordpress.com/congreso-sochicri-2022/) congress
+- Patrick
+    - stayed one and a half week at the University of Edinburgh for an exchange regarding COMBINE
+    - still working on dynamic mu star calibration
+
+### General Announcements
+- The OGGM - PyGEM Global Glacier Modeling Workshop 2022 announcement is out: https://oggm.org/2022/05/09/6th-workshop-announcement/
+- OGGM Science Café on July 6th: “2010-2020 global glacier mass loss and mass balance partitioning from radar altimetry”, by Noel Gourmelen and Livia Jakob
+
+### Group Agenda Points
+- Anouk: Updating ['Past and present OGGM contributors'](https://oggm.org/community/)
+- Hamid: OGGM installation on Windows
+- Lilian presented her work on the precipitation factor
+- Gathering Monday evening during the EGU General Assembly
+
+
+# Call: 2022-05-04
+
+### Participants 
+
+Please sign in below so we know who will be/was here:
+
+Name / Institution / @GitHub handle (optional)
+- Anouk Vlug / University of Innsbruck / @anoukvlug
+- Rodrigo Aguayo / University of Concepcion / @rodaguayo
+- Erik Holmgren / University of Innsbruck / @holmgren825
+- Sarah Hanus / University of Zurich / @sarah-hanus
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+- Hamid Mojtabavi / University of Bremen /@Hamid Mojtabavi
+- Niklas Richter / University of Innsbruck / @Richteny
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+- Francesc Roura / University of Innsbruck / @franra9
+
+### Flash updates
+- Anouk
+    - Started my "OGGM-postdoc".
+- Rodrigo 
+    - Started my "OGGM-internship" :)
+- Erik
+    - Finalising thesis.
+    - Back working on Edu.
+- Francesc
+    - Glacier centerlines repository
+- Sarah
+    - starting working with OGGM again
+- Lilian
+    - GlacierClimate workshop with school class, also doing projections again and comparing them for different calib options, thinking about using a finer resolution scale climate dataset (CHELSA-W5E5, https://data.isimip.org/10.48364/ISIMIP.836809.3, 1km-resolution, officially only until 2016 but it will be extended), however need to discuss bias correction issue
+- Fabi
+    - Habil talk
+    - some back and forth with Romain Millan about the velocities
+
+### Announcements
+- EGU General Assembly, evening gatherings:
+    - OGGM: Monday evening
+    - Cryosphere Division + APECS: Wednesday evening (likely, this is not official yet)
+- OGGM Workshop, 16-21 September 2022, Finse Norway. (The official announcement should be out soon-ish.)
+
+### Group Agenda Points
+- Rodrigo will give a presentation on "*Projecting freshwater inputs to the coastal system of Western Patagonia: problems and future challenges*".
+- Documentation related questions.
+
+# Call: 2022-04-20
+
+### Participants 
+
+Please sign in below so we know who will be/was here:
+
+Name / Institution / @GitHub handle (optional)
+- Anouk Vlug / University of Innsbruck / @anoukvlug
+- Nicolas Champollion / Institut des Géosciences de l'Environnement, Grenoble / @nchampollion
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+- Patrick Schmitt / University of Innsbruck / @pat-schmitt
+- Rodrigo Aguayo / University of Concepcion / @rodaguayo
+- Samar Minallah / University of Michigan / @minallah
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+
+### Flash updates
+- Lilian 
+    - working on manuscript design
+- Patrick
+    - first try of dynamic spinup matching geodetic mass balance (incorporating a bed inversion step) to complicated
+    - now trying a simpler approach without inversion step
+- Rodrigo
+    - Fieldwork in Patagonia
+    - Internship
+- Samar
+    - Have the first draft of OGGM Karakoram paper - doing some more analysis to tie things up
+    - Starting post doc in August, will be working on incorporating mountain glaciers in CESM, and other stuff 
+- Fabien
+    - No OGGM news - I have my Habil presentation next week
+
+### Announcements
+- OGGM Sciene Café May 11th: "A global 40-year record of minimum exposed snow and ice and uncertainty from MODIS and Landsat", by Karl Rittger
+
+### Group Agenda Points
+- Reflect on last weeks Science Café on MB gradients.
+
+# Call: 2022-04-06
+
+### Participants 
+
+Please sign in below so we know who will be/was here:
+
+Name / Institution / @GitHub handle (optional)
+- Anouk Vlug / University of Innsbruck / @anoukvlug
+- Nicolas Champollion / Institut des Géosciences de l'Environnement, Grenoble / @nchampollion
+- Francesc Roura Adserias / University of Innsbruck / @franra9
+- Hamid Mojtabavi / University of Bremen /@Hamid Mojtabavi
+- Muhammad Shafeeque / University of Bremen
+- Patrick Schmitt / University of Innsbruck / @pat-schmitt
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+- Lizz Ultee / Middlebury College / @lizzultee
+
+### Flash updates
+- Anouk
+    - Still working on the manuscript about the last millenium simulation.
+    - I'm considering to go to the Dutch Polar Symposium on May 19th: https://www.nwo.nl/en/meetings/polar-symposium.
+- Nico
+    - [PhD proposal on glacier modeling uncertainties](https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.adum.fr%2Fas%2Fed%2Fvoirproposition.pl%3Flangue%3D%26site%3Dedtue%26matricule_prop%3D41075%23version&data=04%7C01%7Ctamsin.edwards%40kcl.ac.uk%7Cb34a71717d1040f4a99608da17a211cd%7C8370cf1416f34c16b83c724071654356%7C0%7C0%7C637848282093277530%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=igB%2FGi8MyNef5Rsbho4lnG%2F%2FpSx%2BpCBI8ii%2BsRrZSeE%3D&reserved=0)
+    - French project on glacier modeling uncertainties
+    - IAHS conference in France where I will present Gimenes's results
+    - Millan's science café when ? Fabien ?
+- Hamid
+    -  I was on holiday last week :-)
+    -  Working on my manuscript and annual report for my postdoc project.
+-  Patrick
+    -  still working on dynamic spinup to incorporate calibration to geodetic mass balance
+    -  working on numeric instability filter
+- Fabien:
+    - Released 1.5.3! 
+    - https://docs.oggm.org
+    - https://github.com/OGGM/oggm/issues/1407
+- Lilian:
+    - had some discussions with other people on the spatial uncertainty aggregation
+    - did some analysis on climate sensitivities of my mass-balance models
+- Lizz:
+    - No updates, professional lurker interested in peak water
+- Francesc:
+    - Master thesis applying OGGM to Aneto glacier (Pyrenees)
+    - Glacier centerlines in a separate repository
+
+### General Announcements
+- April 13th Science Café with a presentation from Evan Miles
+
+### Group Agenda Points
+- @nchampollion will give a presentation on the topic "Impact of glacier initial thickness on the timing of the peak-water: A case study in the Western Kunlun Mountains of the Tibetan plateau"
+- EGU General Assembly
+- Crysophere 2022 Island
+
+
+# Call: 2022-03-23
+
+### Participants 
+
+Please sign in below so we know who will be/was here:
+
+Name / Institution / @GitHub handle (optional)
+- Anouk Vlug / University of Innsbruck / @anoukvlug
+- Erik Holmgren / University of Innsbrick / @holmgren825
+- Muhammad Shafeeque / University of Bremen 
+- Patrick Schmitt / University of Innsbruck / @pat-schmitt
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+
+### Flash updates
+- Anouk:
+    - I got the OGGM postdoc position, which I will start May 1st. :smiley: 
+    - My last millennium simulations are finally finished, so I can fully focuss now on writing the manuscript.
+    - A manuscript that Li Fei and I have been contributing to, on '*Regional and tele-connected impacts of the Tibetan Plateau surface darkening*', got mostly very constructive reviews. We are also contributing to another manuscript, which is about the impacts of installing large solar farms in China.
+- Erik:
+    - New OGGM-Edu interface is out in the wild.
+    - Very close to a first version of thesis.
+- Muhammad
+    - Last week I sent some results to Fabian. I ran the model again with two different pre-processed glacier directories cases, i.e., with and without calving. I saw some improvements (melt_on_glacier is almost same - slightly higher in with_calving case). However, volume is different for both. Moreover, smb is also more negative compared to reference data.
+    - How do we know which volume is OK, i.e., can we do any comparison with any reference data? (because volume is different for different precipitation scaling factor!)
+    - How can I make mass balance less negative? i.e., which parameters are needed to be tunned other than precipitation factor, threshold temperature for solid precipitation, threshold temperature for melt, temperature lapse rate.
+
+- Patrick
+    - working on dynamic spinup function:
+        - already implemented: define an absolute max value to match, define a minimum ice thickness
+        - upcoming work: started on integrating dmdtda as a variable to match
+    - COMBINE: discovered difficulties due to numeric instabilities of dynamic model
+- Lilian
+    - did some comparison of different calibration options and MB type options for reference glaciers
+    - found daily bias correction issue because prcp std. is not preserved -> way around: just use the internal ICIMIP bias correction (as Sarah is doing)
+- Fabien:
+    - Release almost there! Will be 1.5.3, not 1.6
+    - 1.6 will have new glacier directories as default
+
+### Group Agenda Points
+- Erik will show case the OGGM-EDU notebooks.
+
+
+# Call: 2022-03-09
+
+### Participants 
+
+Please sign in below so we know who will be/was here:
+
+Name / Institution / @GitHub handle (optional)
+- Patrick Schmitt / University of Innsbruck / @pat-schmitt
+- Hamid Mojtabavi / University of Bremen /@Hamid Mojtabavi
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+- Muhammad Shafeeque / University of Bremen
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+
+### Flash updates
+
+- Fabien:
+    - still no release but getting closer. Always internal issues to solve in #hardcore-programming channel
+    - paper from Wilehlm is out
+
+- Patrick:
+    - fixed memory leak in COMBINE -> now can really start to play around (i hope)
+    - fixed a bug in the dynamic spinup function (was not using the calibrated A and fs values from the inversion), thanks to discussion with Samar
+    - created prepro directories with dynamic spinup (starting from oggm_v1.6/L3-L5_files/ERA5/elev_bands/qc0/pcp1.6/match_geod_pergla), can show first analysis of differences
+
+- Hamid:
+   - Working as usual on my mass balance-debris module (trying to fix a bug).
+   - Working on the abstracts for different conferences.    https://www.wcrp-climate.org/news/wcrp-news/1696-sea-level-2022
+https://www.cryosphere2022.is 
+      - Advising a bachelor student for his thesis that is about the "How does debris cover affect the surface mass balance of glaciers?" 
+      - Thinking about more topics for the thesis (bachelor or master) that could be related to the OGGM. Any suggestions are welcome.
+      - Submitted a manuscript (co-author, not relevant to OGGM .-) 
+                   
+
+- Lilian:
+    - made my surface type distinction model faster
+    - created "3-step" calibration scheme with three metrics (geodetic bias, winter MB bias, std. quot) for reference glaciers, currently analysing that
+    - working on conference abstract for cryo2022 in iceland 
+
+### Group Agenda Points
+- Erik will show case the OGGM-EDU notebooks in the next meeting (March 23rd).
+
+
+# Call: 2022-02-23
+
+### Participants 
+
+Please sign in below so we know who will be/was here:
+
+Name / Institution / @GitHub handle (optional)
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+- María Pesci / Leibniz Universität Hannover / @mariapesci
+- Malisse Lummus / University of Kansas / @mlummus
+- Hamid Mojtabavi / University of Bremen /@Hamid Mojtabavi
+- Rodrigo Aguayo / University of Concepcion / @rodaguayo
+- Muhammad Shafeeque / University of Bremen
+- Samar Minallah / University of Michigan
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+- Patrick Schmitt / University of Innsbruck / @pat-schmitt
+
+
+### Flash updates
+
+- Fabien:
+    - worked with patrick on the dynamical spinup
+    - merged a big OGGM-Edu PR
+    - worked on global glacier volume figure
+- Lilian: 
+    - trying to include seasonal MB for calibration/validation into my MBsandbox
+    - many problems emerged as I started to include a temperature bias, so I need to change my methods
+    - added WGMS MB profiles to OGGM
+- Patrick:
+    - first results with COMBINE, but some problems with the RAM during the runs (but some ideas what I can try to fix it) 
+    - worked on dynamic spinup function
+- Hamid:
+     - The final paper from my PhD has just been published today :-)
+     -  I have submitted an abstract in “Glacier-atmosphere coupling in mountain environments” session for the International Mountain Conference in Innsbruck 2022 “Modeling the impact of debris cover on glacier evolution: an application to Alaska” 
+     -  Working on reanalysis data for the LIA outlines.  It seems 20th century reanalysis version 3 is the best one for the long term period.
+     -  Thinking about OGGM parameters for the parameter perturbation experiments.
+ -  Sarah:
+     -  submitted abstract to IMC
+ - Rodrigo:
+     - continue working paperwork to Visa -> April 30 in Innsbruck 
+ - Malisse
+     - tease out glacier ice melt vs snow melt on glaciers
+ - Maria
+     - Interested in area
+ - Samar
+     - still working on the paper and has a few questions
+ - Muhammad
+     - Flade isblink - 
+     
+### Action items
+
+- invite Erik to make a showcase of OGGM-Edu notebooks
+
+### Group Agenda Points
+
+- Dynamical spinup
+- flowline to area conversion
+- Samar
+
+
+# Call: 2022-02-09
+
+### Participants 
+
+Please sign in below so we know who will be/was here:
+
+Name / Institution / @GitHub handle (optional)
+- Anouk Vlug / University of Innsbruck / @anoukvlug
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+- Hamid Mojtabavi / University of Bremen /@Hamid Mojtabavi
+- Jan-Hendrik Malles / University of Bremen / @jmalles 
+- Patrick Schmitt / University of Innsbruck / @pat-schmitt
+- Sarah Hanus / University of Zurich / @sarah-hanus
+- Ritu Anilkumar / Indian Institute of Technology Guwahati
+- Rodrigo Aguayo / University of Concepcion / @rodaguayo
+- Samar Minallah / University of Michigan / @minallah
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+
+### Flash updates
+- Sarah:
+    - still thinking about how to deal with precipitation factor in OGGM, global prcp-factor most likely overestimates glacier runoff contributions for Rhine
+    - 
+- Patrick:
+    - playing around with COMBINE
+- Lilian:
+    - working on IMC abstract
+    - trying to include MB profile observation into calibration to have three estimates to calibrate temp. bias, prcp-fac and melt_f (i.e. mustar) for "reference" glaciers
+- Anouk:
+    - I'm almost done doing simulations.
+- Rodrigo:
+    - Funding for internship in Innbruck accepted :)
+    - Working on first simulations, still a lot of polishing to do before sharing
+- Samar:
+    - Still trying to finalize OGGM work
+    - Still trying to get CISM runs ready for GlacierMIP
+    - Defending in July so trying to wrap up work on soem of the chapters
+- Hamid:
+    - Working on an abstract for the International Mountain Conference in Innsbruck, Austria
+- Fabien:
+    - a few OGGM PRs merged, some large but excellent ones pending :sob:: Patrick's spin up (quick to merge but needs some work to be used for hydrological) and Erik's OGGM-Edu.
+    - Wilhelm's paper accepted 
+    - Romain Millan's paper leads to confusion and irritation in the GlacierMiP / RGI community: https://www.nature.com/articles/s41561-021-00885-z
+- Nico:
+    - has an idea for a PhD
+
+
+### Action items
+- Fabien will lead the next meeting (23-02-2022) 
+- Nico volunteered to lead a Science Café about Millan et al
+
+
+### Group Agenda Points
+
+- Romain Millan's paper
+
+
+# Call: 2022-01-26
+
+### Participants 
+
+Please sign in below so we know who will be/was here:
+
+Name / Institution / @GitHub handle (optional)
+- Anouk Vlug / University of Innsbruck / @anoukvlug
+- Jan-Hendrik Malles / University of Bremen / @jmalles 
+- Nicolas Champollion / Institut des Géosciences de l'Environnement, Grenoble / @nchampollion
+- Muhammad Shafeeque / University of Bremen
+- Hamid Mojtabavi / University of Bremen /@Hamid Mojtabavi
+- Patrick Schmitt / University of Innsbruck / @pat-schmitt
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+
+### Flash updates
+- Jan:
+    - Started writing paper on frontal ablation projections
+    - Lots of paperwork/organizational stuff...
+- Nico:
+    - Long time away from OGGM community :-(
+    - Lucille Gimenes is writing an article about the impact of glacier initial thickness on glacier evolution and peak water timing
+    - 2 new internships starting in February and April using OGGM and Elmer/Ice in the near past for massif du Mont-Blanc glaciers and extend to other regions (Monte Rosa, Everest)
+    - Thank you Patrick about dynamical spinup that I am using now (sorry I did not implement the function)
+    - Working on GlacierMIP3 scripts that I will share before the runs
+    - Ale Caro works on Andes glaciers simulation with OGGM
+- Patrick:
+    - Nothing special to report (working on COMBINE)
+    - report on the spinup
+- Anouk:
+    - You can find the calendar for the "Science Café" here: https://oggm.org/meetings/
+- Lilian:
+    - started to include MB-profiles to find out how different MB models model elevation-dependent MB
+    - some new ideas because of PhD concept defense
+- Fabien:
+    - revisions Paper Wilhelm
+    - proposal in Austria with hydrologists (50 kE)
+    - proposal from Marin Kneib on avalanches (small WP for OGGM)
+    - new EU proposal with Zemp Rabatel Huss... on real-time monitoring and data-assimilation
+    - RGI is still going
+    - backlog on TODOs and PR reviews is increasing...s
+
+
+
+
+### Action items
+- OGGM "Science Café" on non-meeting Weds
+
+### Group Agenda Points
+- Next Wednesday (Febuary 2nd 16:00 CET) we will have our first OGGM "Science Café". @fmaussion will take the lead and we will discuss the recently published arcticle by Bolibar et al., "Nonlinear sensitivity of glacier mass balance to future climate change unveiled by deep learning" (https://www.nature.com/articles/s41467-022-28033-0)
+- On going projects slack channel
+- Update on cluster documentation
+- Presentation by @jmalles on frontal ablation projections.
+
+
+# Call: 2022-01-12
+
+### Participants 
+
+Please sign in below so we know who will be/was here:
+
+Name / Institution / @GitHub handle (optional)
+- Anouk Vlug / University of Innsbruck / @anoukvlug
+- Julia Eis / University of Bremen / @juliaeis 
+- Muhammad Shafeeque / University of Bremen
+- Hamid Mojtabavi / University of Bremen /@Hamid Mojtabavi
+- Rodrigo Aguayo / University of Concepcion / @rodaguayo
+- Sarah Hanus / University of Zurich / @sarah-hanus
+- Patrick Schmitt / University of Innsbruck / @pat-schmitt
+- Jan-Hendrik Malles / University of Bremen / @jmalles 
+- Samar Minallah / University of Michigan
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+### Flash updates
+- Anouk
+    - EGU abstract session CL4.3
+- Julia:
+    - 2nd part of maternal leave starts soon (End of January - End of June)
+    - will submit many jobs to the cluster (latest on 26.01)
+    - need to figure out by then which preprocessed directories would be the best to use
+        - What is the plan for GlacierMIP3 regarding the preprocessing? 
+- Hamid: 
+    - Start working with some LIA outlines from Alaska!
+    - As the cluster is busy these days, I have tried to test some code in hub.oggm.org. However, It doesn't work very         well because of storage limitations and other errors!
+    - Working on mass balance with debris covers.
+- Rodrigo:
+    - A finally finished non-OGGM projects. 
+    - I haven't yet received an answer for the internship in Innsbruck. Working on Plan B
+- Sarah:
+    - finished downscaling climate data (no real differences, as expected)
+    - did a test run of the whole work flow with running all GCMs and RCPs
+- Patrick:
+    - EGU abstract with COMBINE for session CR2.9
+    - working on COMBINE and dynamic_spinup function for OGGM
+- Jan:
+    - Start making sense of data; maybe something to show soon
+- Samar:
+    - Wrapping up some final Karakoram OGGM work and then will draft the paper
+- Fabien:
+    - RGI7 alpha out for review
+    - PostDoc application deadline 
+    - Wilhelm's paper and Li Fei's paper had quite nice reviews, revisions in preparation (Wilhelm) or re-submitted (Li Fei) - https://oggm.org/publications
+    - David Rounce's paper almost ready to be submitted
+    - Nidheesh' paper also almost ready to be submitted 
+    - Small updates to OGGM - will draft a release soon
+- Lilian:
+    - corrected the match_per_glacier gdirs because of the error that I mentioned last time -> inside of oggm_v1.6
+    - updated wgms_sample_data (before only went until end of 2018) -> fabi needs to accept it however first
+    - PhD concept defence on Monday, 17th, at 15:00
+
+### Action items
+- OGGM "Science Café" on non-meeting Weds
+
+### Group Agenda Points
+- Julia will explain her workflow on the cluster making use of running in idle mode. 
+- Using the cluster in these busy times.
+- Questions from Julia about the preprocessed directories
+
+# Call: 2021-12-15
+
+### Participants 
+
+Please sign in below so we know who will be/was here:
+
+Name / Institution / @GitHub handle (optional)
+- Anouk Vlug / University of Innsbruck / @anoukvlug
+- Muhammad Shafeeque / University of Bremen 
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+- Hamid Mojtabavi / University of Bremen /@Hamid Mojtabavi
+- Patrick Schmitt / University of Innsbruck / @pat-schmitt
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+- Jan-Hendrik Malles / University of Bremen / @jmalles 
+
+### Flash updates
+- Anouk
+    - I finally defened my thesis.
+    - I'm still working on my last millennium LMR and CESM-LME simulations. 
+- Fabien:
+    - Working on RGI full time when not working on other things
+    - Li Fei's paper resubmitted.
+- Hamid:
+    - Thinking about how to use LIA outlines (form Uni Zürich) for evaluation of long-term model performance in OGGM.
+    - I have an AGU online poster :-) 
+- Patrick:
+    - testing dynamic spinup, no results to show so far 
+
+- Lilian:
+    - error analysis -> https://nbviewer.org/urls/cluster.klima.uni-bremen.de/~lschuster/error_analysis/error_analysis_v1.ipynb?flush_cache=true
+    - dmdtda and historical_run_output comparison of different preprocessed gdirs inside documentation now -> https://nbviewer.org/urls/cluster.klima.uni-bremen.de/~lschuster/error_analysis/working_glacier_gdirs_comparison.ipynb?flush_cache=true
+    - because of that, found an error that is important for everyone using the "match_geod_pergla" option (the error was actually inside of `mb_climate_on_height`, see https://github.com/OGGM/oggm/pull/1351)
+
+- Jan
+    - Fiddling around with some dynamical and inversion issues
+
+### Action items
+- The next meeting will be on January 12th 16:00 CET
+
+### Group Agenda Points
+- EGU General Assembly 
+- OGGM "Science Café" on non-meeting Weds:
+    - Past invites: romain hugonnet, will kotschinski...
+    - Future invites: Evan Miles, Noel Gourmelen, etc. 
+    - Who wants to take care of this?
+
+# Call: 2021-12-01
+
+### Participants 
+
+Please sign in below so we know who will be/was here:
+
+Name / Institution / @GitHub handle (optional)
+- Anouk Vlug / University of Innsbruck / @anoukvlug
+- Jakob Steiner / ICIMOD / @fidelsteiner
+- Muhammad Shafeeque / University of Bremen
+- Sarah Hanus / University of Zurich / @sarah-hanus
+- Jan-Hendrik Malles / University of Bremen / @jmalles 
+- Julia Eis/ University of Bremen/ @juliaeis 
+- Patrick Schmitt / University of Innsbruck / @pat-schmitt
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+
+
+### Flash updates
+- Anouk
+    - Still working on the last millennium simulation. Aside from that I'm preparing for my defense.
+- Jan
+    - Still working a bit on calibration routine; did some (preliminary) runs with new/geodetic smb calibration
+- Sarah
+    - good time in Innsbruck
+    - working on the cluster now and checking whether my workflow for running OGGM works (bothered Lily and Fabi a lot, sorry!), I think most issues are sorted out now 
+- Julia
+    - restarted working with OGGM again :) 
+    - did some experiences with the new stopping criterion during equilibrium (random climate) runs
+    - Nan values after the stoping criterion is satisfied make some troubles (when using them as initial condition (see https://github.com/OGGM/oggm/issues/1344) and also when reading the output, as each glacier stops at a different time) 
+- Patrick
+    - new app now on OGGM-Edu website ([https://edu.oggm.org/en/latest/mb_simulator.html](https://edu.oggm.org/en/latest/mb_simulator.html)), feedback welcome
+    - working on dynamic spinup, start testing this new task now globaly
+- Fabien
+    - Not many OGGM news, time just flies
+    - Prepared worskhop outline with ICIMOD and HUC for a workshop in Spring 2023.
+    - Preparing AGU Talks, this will help
+- Lilian
+    - working a bit on the documentation
+        - some error analysis for different preprocessing directories that will go into documentation
+    - PhD concept submitted to Fabien
+
+### Group Agenda Points
+
+- Julia's stop criterion: https://github.com/OGGM/oggm/issues/1344 
+
+### Action items
+- There is still a meeting on December 15th and after that the first one will be on January 12th. From now on we will schedule larger presentations in the weeks that we don't have our regular meeting (also Wednesday 16:00 CET). 
+
+# Call: 2021-11-17
+
+### Participants 
+
+Please sign in below so we know who will be/was here:
+
+Name / Institution / @GitHub handle (optional)
+- Anouk Vlug / University of Innsbruck / @anoukvlug
+- Jan-Hendrik Malles / University of Bremen / @jmalles 
+- Romain Hugonnet / ETH Zürich & University of Toulouse / @rhugonnet
+- Niklas Richter / University of Innsbruck/ @Richteny
+- Samar Minallah / University of Michigan Ann Arbor
+- Muhammad Shafeeque / University of Bremen
+- Hamid Mojtabavi / University of Bremen /@Hamid Mojtabavi
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+- Patrick Schmitt / University of Innsbruck / @pat-schmitt
+- Melissa Mengert/ University of Brmeen/@Melissa
+- Nicolas Champollion / Institut des Géosciences de l'Environnement / @nchampollion 
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+
+
+### Flash updates
+
+- Anouk
+    - ELA diagnostics: https://github.com/OGGM/oggm/pull/1333
+- Jan
+    - Working on bringing Romain's and Will's data together for frontal ablation calibration/projection
+    - Start writing Methods section for a corresponding paper
+- Lilian
+    - PhD concept almost ready to "submit" it to Fabien 
+    - will work on documenting the different quality check and temperature bias correction methods of OGGM and on generalising error analysis workflows, any comments are welcome
+    - happy to hear Romain's uncertainty propagation talk
+- Patrick
+    - new app now on the server in bremen ([bokeh.oggm.org/mb_simulator/app](https://bokeh.oggm.org/mb_simulator/app)), release on OGGM-Edu website coming soon
+    - start working on an dynamic spinup function for the initialisation of OGGM runs
+    - programming work on COMBINE
+- Fabien
+    - Managed to delegate some work to Lily and Patrick
+    - Not much new code on OGGM, mosty docs and fixes. New release soon.
+    - Don't forget to contribute to the tutorials!
+- Nicolas
+    - no update !
+
+
+### Group Agenda Points
+
+- Presentation by Romain on *How to propagate uncertainties from local to regional scales?*
+
+# Call: 2021-11-03
+
+### Participants 
+
+Please sign in below so we know who will be/was here:
+
+Name / Institution / @GitHub handle (optional)
+- Anouk Vlug / University of Innsbruck / @anoukvlug
+- Muhammad Shafeeque / University of Bremen
+- Samar Minallah / University of Michigan
+- Hamid Mojtabavi / University of Bremen /@Hamid Mojtabavi
+- Larissa van der Laan / University of Hannover / @Lvdlaan
+- Patrick Schmitt / University of Innsbruck / @pat-schmitt
+- Jan-Hendrik Malles / University of Bremen / @jmalles 
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+- Fabien Maussion / University of Innsbruck/ @fmaussion 
+- Lizz Ultee / Middlebury College / @ehultee
+
+
+### Flash updates
+- Anouk: 
+    - I have started to use the new flowline diagnostics, so I will be able to prescribe the geometry of the LMR simulations during the simulations forced with the CESM-LME. 
+    - I started working on getting the ELA back as diagnostic variable in OGGM. It will become a variable that can seperately be computed (it won't be a standard model run output). 
+- Patrick:
+    - working on final steps for the release of the new OGGM-Edu App
+    - continue connecting COMBINE with OGGM GlacierDirectory
+- Lilian:
+    - worked last week together with Sarah that she can use the massbalance-sandbox with the hydro-model
+    - writing phd concept ...
+- Fabien:
+    - some changes to OGGM: https://github.com/OGGM/oggm/commits/master
+- Samar:
+    - Trying to set up an ice sheet model (CISM) for mountain glaciers and GlacierMIP
+    - Still trying to finish OGGM work for Karakoram (presenting at AGU)
+    - Applying for postdoc positions 
+
+- Lizz:
+    - Supporting student working on hydro simulations of Olivares Alfa, Chile
+
+### Group Agenda Points
+- Presentations by Jan and Larissa
+
+### Action items
+- Presentation by Romain November 17th
+
+# Call: 2021-10-20
+
+### Participants 
+
+Please sign in below so we know who will be/was here:
+
+Name / Institution / @GitHub handle (optional)
+- Anouk Vlug / University of Innsbruck / @anoukvlug
+- Jan-Hendrik Malles / University of Bremen / @jmalles
+- Muhammad Shafeeque / University of Bremen
+- Jakob Steiner / ICIMOD, Uni Utrecht / @fidelsteiner
+- Julia Eis/ University of Bremen / @juliaeis
+- Larissa van der Laan / University/ @Lvdlaan
+- Melissa Mengert / University of Bremen/ @Melissa 
+- Hamid Mojtabavi / University of Bremen /@Hamid Mojtabavi
+- Patrick Schmitt / University of Innsbruck /@pat-schmitt
+- Lilian Schuster / University of Innsbruck / @lilianschuster
+- Sarah Hanus / University of Zurich / @sarah-hanus
+- Fabien Maussion / University of Innsbruck/ @fmaussion
+- Samar Minallah / University of Michigan/ @minallah
+
+### Flash updates
+- Anouk:
+    - I'm currently working on global simulations over the period 0-2000 CE, forced with the Last Millenium Reanalysis. I'm in the phase of calibrating the simulations. In the end this experiment will serve as base simulation for the mass balance attribution to different climate forcings over the last millenium.
+- Jan:
+    - Did some calibrated projections w/ and wo/ frontal ablation
+    - Can show some plots soon
+- Julia:
+    - Coming to an end with my digression on carbon-cycle climate modeling 
+    --> I would be happy to present some results about it (not OGGM related, but it is the prehistory and closely related to my following work with OGGM)
+    - will start global equilibrium runs with OGGM soon
+- Larissa:
+    - Decision: recalibrating to Hugonnet for 2000 onward decades?
+    - Finishing all decades: can show plots next meeting?
+- Patrick:
+    - Not much new, still working on connecting COMBINE with GlacierDirectories for testing the method on real glaciers
+- Lilian:
+    - writing PhD concept, but got stuck in details when comparing method implementations between models :-)
+- Sarah: 
+    - trying to downscale coarse climate data, however it is very slow
+- Fabien:
+    - did some tests simulations for glacierMIP3
+    - new stop criterion for OGGM simulations
+    - Geodetic calibration now happening on calendar years (also in the preprocessed directories) and also works on multiple flowlines on demand (not recommended) 
+    - As always: recent commits on gitub: https://github.com/OGGM/oggm/commits/master
+- Hamid
+    - Working on projections with MBdebris (mass balance with debri covers)
+- Samar    
+    - Doing some runs in Himalaya-Karakoram region with ERA5-L atm data - preparing for AGU FM presentation
+- Muhammad 
+    - Recently started in Bremen and going to work on Greenland Peripheral glaciers with OGGM.
+- Melissa
+    - Working on a poster
+    - Received comments on the sun changing colors in the graphics
+
+### Group Agenda Points
+- Day light saving time will end here on October 31st (read the clock will go 1 hour backwards). If that is not the case where you are, please keep in mind for the next meeting that the time shifts ;) 
+- Journal club
+- Showing some first results of the LMR simulations
+- Velocity
+
+
 # Call: 2021-10-06
 
 ### Participants 
